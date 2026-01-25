@@ -1,0 +1,72 @@
+package entities;
+
+public class Trainer {
+    private int id;
+    private String fullName;
+    private String specialization;
+    private String email;
+    private String phone;
+
+    public Trainer() {
+    }
+
+    public Trainer(int id, String fullName, String specialization, String email, String phone) {
+        this.id = id;
+        this.fullName = fullName;
+        this.specialization = specialization;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "Trainer{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", specialization='" + specialization + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
+}
+
