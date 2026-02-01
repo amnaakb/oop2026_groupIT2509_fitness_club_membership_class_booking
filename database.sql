@@ -37,4 +37,3 @@ CREATE TABLE bookings (
                           FOREIGN KEY (member_id) REFERENCES members(id),
                           FOREIGN KEY (class_id) REFERENCES fitness_classes(id)
 );
-#
