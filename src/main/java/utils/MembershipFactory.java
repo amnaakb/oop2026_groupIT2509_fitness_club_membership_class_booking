@@ -15,7 +15,7 @@ class YearlyMembership implements IMembership {
 }
 
 // Реализация: Обычный (оставляем)
-class StandardMembership implements IMembership {
+class VisitBasedMembership implements IMembership {
     @Override public double getPrice() { return 10.0; }
     @Override public String getBenefits() { return "Pay per visit"; }
 }
@@ -23,12 +23,12 @@ class StandardMembership implements IMembership {
 // Фабрика (оставляем)
 public class MembershipFactory {
     public static IMembership create(String type) {
-        if (type == null) return new StandardMembership();
+        if (type == null) return new VisitBasedMembership();
 
         switch (type.toLowerCase()) {
             case "monthly": return new MonthlyMembership();
             case "yearly":  return new YearlyMembership();
-            default:        return new StandardMembership();
+            default:        return new VisitBasedMembership();
         }
     }
 }
