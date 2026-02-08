@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class FilterUtils {
-    // Generic метод <T>
+
     public static <T> List<T> filter(List<T> items, Predicate<T> predicate) {
         List<T> result = new ArrayList<>();
         for (T item : items) {

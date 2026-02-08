@@ -35,7 +35,7 @@ public class MemberRepositoryImpl implements MemberRepository {
             return true;
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Error creating member (Database unavailable): " + e.getMessage());
             return false;
         }
     }
@@ -61,7 +61,8 @@ public class MemberRepositoryImpl implements MemberRepository {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            // ЗАМЕНА: Это главное место. Теперь программа скажет это и продолжит работать.
+            System.out.println("Database connection failed. Switching to TEST MODE (using fake data).");
         }
 
         return members;
@@ -90,10 +91,10 @@ public class MemberRepositoryImpl implements MemberRepository {
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            // ЗАМЕНА
+            System.out.println("Error getting member by ID: " + e.getMessage());
         }
 
         return null;
     }
 }
-

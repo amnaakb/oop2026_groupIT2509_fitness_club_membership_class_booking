@@ -3,12 +3,11 @@ package entities;
 public class GymConfig {
     private static GymConfig instance;
     private String gymName;
-    private String version; // 1. Добавили поле версии
+    private String version;
 
-    // Приватный конструктор
     private GymConfig() {
         this.gymName = "Iron Fitness Club";
-        this.version = "2.0 (Milestone 2)"; // 2. Задали версию
+        this.version = "2.0 (Milestone 2)";
     }
 
     public static GymConfig getInstance() {
@@ -20,7 +19,6 @@ public class GymConfig {
 
     public String getGymName() { return gymName; }
 
-    // 3. Добавили метод, на который ругается Main
     public String getVersion() { return version; }
 
 }
